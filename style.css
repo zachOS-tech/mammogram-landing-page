@@ -1,0 +1,843 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* 16 px */
+    font-size: 125%;
+}
+
+body {
+    background: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+}
+
+p {
+    max-width: 1200px;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+ul {
+    padding-left: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.052rem;
+}
+
+h2 {
+    font-size: 2.441rem;
+}
+
+h3 {
+    font-size: 1.953rem;
+}
+
+h4 {
+    font-size: 1.563rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+small,
+.text_small {
+    font-size: 0.8rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.topnav {
+    background-color: transparent;
+    display: flex;
+    grid-column-start: 2;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    transition: padding 300ms linear, background-color 150ms linear;
+}
+
+.topnav a {
+    display: grid;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    color: #CE1974;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.topnav.scrolled {
+    background-color: #fff;
+    padding: 0px 10px;
+    height: 50px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.08));
+    transition: background-color 150ms linear;
+}
+/* This prevents the nav bar from cutting off the section header */
+
+#technology::before,
+#testimonials::before,
+#faqs::before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -50px 0 0;
+}
+
+.headline>h2 {
+    margin: 0;
+}
+/* === Hero === */
+
+.hero-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    justify-content: center;
+    align-items: end;
+    padding: 40px 0;
+    background-color: rgb(250, 202, 214);
+    background-image: linear-gradient(86deg, rgba(255, 255, 255, 0) 60%, rgb(250, 202, 214) 60%), url("https://www.comhs.org/-/media/Images/mammogram/images/2022/hero");
+    height: 100vh;
+    background-size: contain;
+    background-position: left;
+}
+
+.hero-section>div {
+    grid-column-start: 2;
+    text-align: center;
+}
+
+.hero-section>div>p {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.hero-section>.headline>.button-primary {
+    width: 53%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 11px 10px 25px;
+    margin: 0 auto;
+}
+
+.hero-section>div.headline>a.phone-number {
+    font-size: 18px;
+}
+
+.awards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.awards>img {
+    width: 70%;
+}
+/* === Earlier is Better === */
+
+.full-width-pink {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #CE1974;
+}
+
+.full-width-pink>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full-width-pink>div>* {
+    color: #FFF;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.computer-only {
+    display: block;
+}
+/* === Call or Click Today === */
+
+.call-or-click {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-or-click>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.call-or-click>div>a {
+    margin: 0 auto;
+}
+/* === Our Mammography Technology === */
+
+.technology {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0px 150px;
+}
+
+.technology>div {
+    margin: 0 50px;
+}
+
+.technology>div.content {
+    width: 80%;
+}
+
+.technology>div.fellowship-trained {
+    margin-top: 60px;
+}
+
+.fellowship-trained {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fellowship-trained>h3 {
+    margin: 10px;
+}
+
+.fellowship-trained>div>div>p {
+    margin: 0;
+    padding: 0;
+}
+
+.fellowship-trained>div>img {
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+    border-radius: 50%;
+}
+
+.fellowship-trained>div {
+    display: flex;
+    width: 100%;
+    align-items: space-between;
+}
+
+.fellowship-trained>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+/* === Testimonials === */
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    padding: 60px 0;
+    background-color: #E7E7E7;
+}
+
+.testimonials .cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.testimonials .cards>div {
+    width: 23%;
+    margin: 20px;
+    padding: 40px;
+}
+
+.testimonials .cards>div>p.name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.testimonials .cards>div>img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+/* === FAQs === */
+
+.faq-section {
+    justify-content: space-around;
+    margin: 100px 100px;
+}
+
+.faqs-right-side {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.faq-section .facts {
+    display: block;
+    float: left;
+    justify-content: flex-start;
+    width: 22%;
+    margin-right: 100px;
+    margin-top: 60px;
+    margin-left: 50px;
+    padding: 0px 25px 20px 25px;
+}
+
+.facts>ul {
+    padding-left: 25px;
+    text-align: left;
+}
+
+.keep-in-mind {
+    display: flex;
+    flex-direction: column;
+}
+
+.keep-in-mind>h2 {
+    margin: 0;
+}
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion {
+    background-color: #e7e7e7;
+    color: #CE1974;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel>ul {
+    padding-left: 30px;
+}
+/* === Final CTA === */
+
+.final-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* === Footer === */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: right;
+    align-items: center;
+    background-color: #CE1974;
+    color: #FFF;
+}
+
+footer>div.copyright {
+    text-align: center;
+}
+
+footer>div>a>img {
+    display: block;
+    margin: 0 50px;
+    width: 100px;
+}
+
+.scroll-to-top-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.scroll-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 70px;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: #CE1974;
+    background-color: #FACAD6;
+}
+
+.scroll-to-top:hover {
+    background-color: hsla(345, 83%, 89%, 0.801);
+}
+
+a {
+    text-decoration: none;
+    color: #CE1974;
+}
+
+a:hover {
+    color: rgba(206, 25, 115, 0.5);
+}
+
+.button-primary {
+    background-color: #CE1974;
+    color: #FFF;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    transition: 300ms;
+}
+
+.button-primary:hover {
+    background-color: hsl(330, 78%, 40%);
+    color: #fff;
+    transition: 300ms;
+}
+
+.button-secondary {
+    background-color: #CE1974;
+    color: #FFF;
+    border: 5px solid #FFF;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 2.54rem;
+    padding: 15px 30px;
+    transition: 300ms
+}
+
+.button-secondary:hover {
+    color: hsl(330, 78%, 45%);
+    background-color: #fff;
+    transition: 300ms;
+}
+
+.card-primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #CE1974;
+    color: #FFF;
+    border-radius: 50px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.08));
+}
+
+.card-secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #CE1974;
+    border-radius: 50px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.08));
+}
+
+.card-gray {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #e7e7e7;
+    border-radius: 50px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.08));
+}
+
+.hide {
+    display: none;
+}
+/* === LAPTOPS AND SOME SMALLER DESKTOPS === */
+
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .hero-section {
+        background-image: linear-gradient(86deg, rgba(255, 255, 255, 0) 60%, rgb(250, 202, 214) 60%), url("https://www.comhs.org/-/media/Images/mammogram/images/2022/hero_small");
+    }
+}
+
+@media (min-width:650px) and (max-width:1280px) {
+    h1 {
+        font-size: 2.441rem;
+    }
+    h2 {
+        font-size: 1.953rem;
+    }
+    h3 {
+        font-size: 1.563rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    p {
+        font-size: 1.1rem;
+        max-width: 768px;
+    }
+    #technology::before,
+    #testimonials::before,
+    #faqs::before {
+        height: 100px;
+        margin: -50px 0 0;
+    }
+    /* === Hero === */
+    .hero-section {
+        background-image: linear-gradient(86deg, rgba(255, 255, 255, 0) 60%, rgb(250, 202, 214) 60%), url("https://www.comhs.org/-/media/Images/mammogram/images/2022/hero_small");
+    }
+    .hero-section>div>p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .hero-section>.headline>.button-primary {
+        width: 75%;
+    }
+    .awards {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    /* === Our Mammography Technology === */
+    .technology {
+        grid-template-columns: 3fr 2fr;
+        margin: 0px 100px;
+    }
+    .technology>div {
+        margin: 0 0px;
+    }
+    .technology>div.content {
+        width: 90%;
+    }
+    /* === Fellowship-Trained === */
+    .technology>div.fellowship-trained {
+        margin: 100px 0px;
+        padding: 20px 0px
+    }
+    .fellowship-trained>div>img {
+        width: 120px;
+        height: 120px;
+    }
+    /* === Testimonials === */
+    .testimonials .cards>div {
+        width: 30%;
+        padding: 30px 20px;
+    }
+    .testimonials .cards>div>p.name {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    /* === FAQs === */
+    .faq-section .facts {
+        width: 30%;
+        margin-left: 0px;
+    }
+    .facts>ul {
+        padding-left: 15px;
+    }
+    .faqs {
+        margin-top: -40px;
+    }
+}
+/* === MOBILE === */
+
+@media (max-width:640px) {
+    h1 {
+        font-size: 1.953rem;
+    }
+    h2 {
+        font-size: 1.563rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    p {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 5%;
+    }
+    small {
+        font-size: 0.7rem;
+    }
+    ul {
+        padding: 0px 40px;
+    }
+    .button-secondary {
+        padding: 10px 25px;
+    }
+    #technology::before,
+    #testimonials::before,
+    #faqs::before {
+        content: "";
+        display: block;
+        height: 0px;
+        margin: 0px 0 0;
+    }
+    /* === Nav === */
+    nav {
+        display: flex;
+        position: relative;
+    }
+    .topnav a {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-top: -10px;
+    }
+    .topnav.responsive {
+        flex-direction: column;
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.scrolled {
+        display: none;
+    }
+    /* === Hero === */
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: flex-start;
+        background-color: #F077AD;
+        background-position: 0% 8%;
+        background-image: url("https://www.comhs.org/-/media/Images/mammogram/images/2022/ONC_Mammo_98_Fall_FY22");
+    }
+    .hero-section>div.headline {
+        grid-row-start: 2;
+    }
+    .hero-section>div.headline>h2 {
+        margin-bottom: 50px;
+    }
+    .hero-section>div.headline>.button-primary {
+        width: 90%;
+        font-size: 20px;
+        padding: 0px 40px 0px 25px;
+    }
+    .hero-section>div.headline>.button-primary>img {
+        padding: 10px;
+        margin: 0;
+    }
+    .hero-section>div.headline>a.phone-number {
+        color: #CE1974;
+        display: block;
+        padding: 10px;
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    .awards {
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+        margin-bottom: -25px;
+        grid-row-start: 2;
+    }
+    /* Disable Parallax Hero */
+    .hero-section {
+        background-attachment: scroll;
+    }
+    /* === Call or Click Today === */
+    .call-or-click {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .call-or-click>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .call-or-click>div>a {
+        margin: 0 auto;
+    }
+    .call-or-click>div>a>.myChart {
+        display: flex;
+        width: 60%;
+        margin: -30px auto 0px auto;
+    }
+    /* === Our Mammography Technology === */
+    .technology {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        margin: 0px;
+    }
+    .technology>div {
+        margin: 0;
+    }
+    .technology>div.content {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .technology>div.fellowship-trained {
+        margin-top: 0px;
+    }
+    .fellowship-trained>div>img {
+        width: 120px;
+        height: 120px;
+        margin: 20px;
+    }
+    /* === Testimonials === */
+    .testimonials .cards {
+        flex-direction: column;
+    }
+    .testimonials .cards>div {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px 10px;
+    }
+    .testimonials .cards>div>p {
+        padding: 0;
+    }
+    .testimonials .cards>div>img {
+        height: 100px;
+        width: 100px;
+    }
+    /* === FAQs === */
+    .faq-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0px 0px;
+    }
+    .faqs-right-side {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .faq-section .facts {
+        float: none;
+        width: 100%;
+        margin: 0px 0px;
+    }
+    .keep-in-mind {
+        margin-top: 40px;
+    }
+    .keep-in-mind>h2 {
+        margin-bottom: -20px;
+    }
+    .faqs>h2 {
+        margin-top: 0px;
+    }
+    .accordion {
+        padding: 20px;
+    }
+    .panel {
+        padding: 0px 20px;
+    }
+    .panel p {
+        padding: 0px;
+    }
+    .panel>ul {
+        padding-left: 20px;
+    }
+    /* === Final CTA === */
+    .final-cta {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .final-cta>.button-primary {
+        padding: 10px 25px;
+        font-size: 20px;
+    }
+    /* === Footer === */
+    footer {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    /* Hide/Show on Mobile */
+    .mobile-only {
+        display: block;
+    }
+    .computer-only {
+        display: none;
+    }
+}
